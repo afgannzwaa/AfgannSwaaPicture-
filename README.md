@@ -1,51 +1,55 @@
-# AfgannSwaaPicture-
-# 📸 SwaaFoto Ultimate v30.0 — Cloud Edition
+#DEV- AFGAN P.N
 
-**SwaaFoto** adalah aplikasi berbasis web "Self-Photo Studio" premium yang dirancang untuk memberikan pengalaman studio profesional langsung dari browser perangkat mobile. Versi **v30.0** ini dilengkapi dengan integrasi cloud otomatis ke Formspree dan sistem filter real-time.
 
----
+# 📸 SwaaFoto Ultimate v31.0 — Pure Studio Edition
 
-## ✨ Fitur Unggulan
-
-* **7 Professional Color Grading:**
-    * `Vivid`, `Vivid Cool`, `Vivid Warm` (High Saturation)
-    * `Dramatic`, `Dramatic Cool`, `Dramatic Warm` (High Contrast)
-    * `Dramatic Mono` (B&W Classic)
-* **Baking Engine:** Filter tidak hanya terlihat di layar, tapi diproses secara permanen ke dalam file `.jpg` saat diunduh.
-* **Smart Batch Downloader:** Mengunduh 5 file sekaligus secara berurutan (4 foto single + 1 foto strip panjang).
-* **Cloud Sync (Formspree):** Foto strip hasil akhir akan otomatis dikirim ke endpoint [Formspree](https://formspree.io/) sebagai backup/log aktivitas.
-* **Fluid Motion UI:** Animasi *staggered*, *top-down modal*, dan efek *bounce* menggunakan Bezier Curve khusus.
-* **No-Zoom Tech:** Algoritma *Center-Crop* yang memastikan rasio wajah tetap proporsional 1:1 tanpa distorsi zoom.
+**SwaaFoto** adalah aplikasi *Self-Photo Studio* berbasis web yang dirancang untuk memberikan pengalaman fotografi profesional tingkat tinggi langsung dari perangkat mobile. Versi **v31.0** ini membuang semua ketergantungan eksternal untuk fokus pada **kecepatan, privasi, dan kualitas visual maksimal**.
 
 ---
 
-## 🚀 Cara Penggunaan
+## 🔥 Fitur Unggulan (Pro Studio)
 
-1.  **Buka Aplikasi:** Jalankan file `index.html` melalui browser (direkomendasikan Chrome/Safari di Mobile).
-2.  **Pilih Filter:** Klik ikon **Adjust** di pojok kanan atas untuk memilih filter dan warna frame (Putih, Hitam, Cream, Gold).
-3.  **Mulai Sesi:** Klik tombol **START SESSION**. Kamu akan mengambil 4 foto dengan jeda waktu 3 detik per foto.
-4.  **Simpan & Sinkron:**
-    * Setelah selesai, klik **SAVE ALL 5 PHOTOS**.
-    * Sistem akan mengunduh 4 foto ke galeri.
-    * Sistem akan membuat 1 foto strip panjang.
-    * **Otomatis:** Foto strip dikirim ke Formspree (Endpoint: `https://formspree.io/f/maqdzorq`).
+* **7 Elite Color Grading:**
+    * `Vivid Series`: (Normal, Cool, Warm) - Warna cerah, kontras tinggi, kulit tetap natural.
+    * `Dramatic Series`: (Classic, Cool, Warm) - Moody, bayangan dalam, tekstur film yang kuat.
+    * `Dramatic Mono`: Black & White dengan kontras tinggi ala majalah fashion.
+* **Pro-Canvas Baking Engine:** Setiap filter yang kamu pilih di layar akan diproses secara matematis ke dalam Canvas HTML5 saat pengambilan gambar. Hasil unduhan adalah file `.jpg` berkualitas tinggi yang sudah memiliki filter permanen.
+* **No-Zoom Logic (1:1 Ratio):** Menghilangkan masalah wajah yang terlihat terlalu dekat (zoomed-in). Algoritma kami mengambil sensor kamera 4:3 dan melakukan *smart-crop* ke 1:1 di titik tengah secara otomatis.
+* **Infinite Animation Loop:** Setelah sesi selesai, hasil foto akan ditampilkan dalam *Polaroid Preview* dengan animasi *Slide* dan *Sticker* yang terus berganti secara dinamis.
+* **Turbo Batch Downloader:** Fitur unduhan sekuensial yang mengunduh 5 file (4 Foto Individual + 1 Strip Panjang) dalam satu klik tanpa membebani RAM ponsel.
 
 ---
 
-## 🛠️ Detail Teknis
+## 🎨 Panduan Filter
 
-### **Teknologi yang Digunakan:**
-* **HTML5 Canvas API:** Untuk penggabungan gambar (Stitch) dan pemrosesan filter pixel.
-* **MediaDevices API:** Akses kamera resolusi tinggi (1280x960).
-* **CSS3 Animations:** Menggunakan keyframes `@keyframes` untuk efek flash dan transisi smooth.
-* **Fetch API:** Untuk pengiriman data Base64 ke server cloud.
+1. **Vivid Cool:** Cocok untuk outdoor atau ruangan dengan lampu putih (memberikan kesan *clean*).
+2. **Dramatic Warm:** Memberikan kesan *vintage* dan *cozy*, sangat bagus untuk warna kulit sawo matang.
+3. **Dramatic Mono:** Pilihan terbaik untuk foto yang ingin terlihat abadi dan elegan.
 
-### **Struktur Kode:**
-```javascript
-const Engine = {
-    state:  { /* Status Kamera & Filter */ },
-    media:  { /* Kontrol Musik & SFX */ },
-    cam:    { /* Logika Kamera & Capture */ },
-    ui:     { /* Animasi Modal & Frame */ },
-    export: { /* Download & Cloud Upload */ }
-};
+---
+
+## 🚀 Cara Menjalankan
+
+1. Simpan kode sebagai `index.html`.
+2. Pastikan file asset seperti `pindah1.png` hingga `pindah4.png` (sticker) dan `musik1.mp3` berada dalam satu folder.
+3. Buka melalui browser (Chrome/Safari recommended).
+4. Tekan **START SESSION** dan bergayalah!
+
+---
+
+## 🛠️ Arsitektur Kode (Pure JS)
+
+Aplikasi ini dibangun menggunakan pola **Modular Engine** tanpa *library* luar (Vanilla JS) agar sangat ringan:
+- **Engine.cam**: Mengelola *stream* kamera dan filter real-time.
+- **Engine.ui**: Mengelola transisi modal dan animasi Polaroid.
+- **Engine.export**: Mengelola perakitan foto strip dan proses unduhan otomatis.
+
+---
+
+## 👨‍💻 Developer
+**Project:** SwaaFoto Studio Afgan  
+**Version:** 31.0 (Pure Performance Build)  
+**Status:** Ready for Production  
+
+---
+*© 2024 SwaaFoto Studio. Fokus pada Kualitas, Bukan Koneksi.*
